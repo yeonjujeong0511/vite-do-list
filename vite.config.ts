@@ -4,7 +4,8 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { resolve } from "path";
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
+  base: mode === "production" ? " /vite-do-list/" : "/",
   resolve: {
     alias: [
       { find: "@src", replacement: resolve(__dirname, "src") },
@@ -14,10 +15,9 @@ export default defineConfig({
       },
     ],
   },
-  base: "/vite-do-list/",
   plugins: [react(), tsconfigPaths()],
   server: {
     host: "localhost",
     port: 3000,
   },
-});
+}));

@@ -9,7 +9,7 @@ function App() {
         todos
       </h1>
       {TODO_LISTS.map((id) => (
-        <TodoList id={id} />
+        <TodoList key={id} id={id} />
       ))}
     </div>
   );

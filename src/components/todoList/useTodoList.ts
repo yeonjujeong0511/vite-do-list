@@ -1,5 +1,5 @@
-import { useEffect, useReducer, useState } from "react";
-
+import { useEffect, useState } from "react";
+import axios from "axios";
 export interface Todo {
   id: string;
   content: string;
@@ -11,6 +11,14 @@ export type TabState = "All" | "Active" | "Completed";
 export type count = number;
 
 const useTodoList = (id: string) => {
+  const test = async () => {
+    const todoList = await axios.get("/todo");
+    console.log(todoList);
+  };
+  useEffect(() => {
+    test();
+  }, []);
+
   const [count, setCount] = useState<count>(1);
   const updateCount = () => {
     setCount(count + 1);
