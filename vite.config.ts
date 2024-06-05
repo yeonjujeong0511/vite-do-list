@@ -14,7 +14,7 @@ export default defineConfig({
       },
     ],
   },
-
+  base: "/vite-do-list/",
   plugins: [react(), tsconfigPaths()],
   server: {
     host: "localhost",
