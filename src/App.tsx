@@ -1,4 +1,4 @@
-import TodoList from "@components/todoList";
+import TodoList from "./components/todoList";
 
 const TODO_LISTS = ["1", "2"];
 

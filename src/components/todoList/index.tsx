@@ -26,7 +26,7 @@ const TodoList = ({ id }: TodoListProps) => {
       toggleTodoAll,
       updateCount,
     },
-  } = useTodoList();
+  } = useTodoList(id);
 
   return (
     <div className="w-[600px] max-h-[calc(100vh-200px)] flex flex-col bg-white rounded-lg drop-shadow-md bg">

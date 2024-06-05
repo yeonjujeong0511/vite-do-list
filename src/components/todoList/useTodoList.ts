@@ -82,9 +82,9 @@ const useTodoList = (id: string) => {
 
   // 수정
   const editTodo = (id: string, content: string) => {
-    setTodos((prevTodos) => {
-      prevTodos.map((todo) => (todo.id === id ? { ...todo, content } : todo));
-    });
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) => (todo.id === id ? { ...todo, content } : todo))
+    );
   };
 
   // 삭제
